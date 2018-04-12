@@ -1,0 +1,65 @@
+ //http://localhost:[port]/1?command=readall возвращаются все заказы в виде JSON.
+//    @RequestMapping(value = "/1", params = {"command"})
+//    public TreeMap<UUID, Order> readallJSON(@RequestParam("command") String cmd, Model map) {
+//
+//        try {
+//            start();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        return ordersProc;
+//    }
+
+    // http://localhost:[port]/2?command=readById&order_id=
+//    @RequestMapping(value = "/2", params = {"command", "order_id"})
+//    public Order readOrderByIdJSON(@RequestParam("command") String cmd, @RequestParam("order_id") UUID id, Model map) {
+//
+//        System.out.println("Поиск Id по заказам, ищем : ... " + id);
+//        Order order = new Order();
+//        for (Map.Entry<UUID, Order> item : ordersProc.entrySet()) {
+//            if (id.toString().equals(item.getKey().toString())){
+//                order = item.getValue();
+//                System.out.println("По вашему id запросу заказ найден!");
+//            }
+//        }
+//        return order;
+//    }
+//
+//    // http://localhost:[port]/3?command=addToCard&card_id=871ce89e-b201-4469-8384-b45cb16ee8e8
+//    @RequestMapping(value = "/3", params = {"command", "card_id"})
+//    public String addToCardJSON(@RequestParam("command") String cmd, @RequestParam("card_id") UUID id, Model map) {
+//
+//        Telephone telephone = new Telephone();
+//        telephone.create();
+//        ShoppingCart cart = new ShoppingCart();
+//        telephone.setID(id);
+//        cart.add(telephone);
+//
+//        System.out.println("Новый товар доваблен в корзину с идентификатором: " + id);
+//        return "Новый товар доваблен в корзину с идентификатором: "+ id;
+//    }
+//
+//    //http://localhost:[port]/4?command=delById&order_id=id
+//    @RequestMapping(value = "/4", params = {"command", "order_id"})
+//    public int delByIdJSON(@RequestParam("command") String cmd, @RequestParam("order_id") UUID id, Model map) {
+//
+//        TreeMap<UUID, Order> ordersProcTmp = new TreeMap<>();
+//        int result = 404;
+//
+//        System.out.println("Ищем заказ с id равным : ... " + id);
+//        for (Map.Entry<UUID, Order> item : ordersProc.entrySet()) {
+//            if (id.toString().equals(item.getKey().toString())){
+//                System.out.println("По вашему id запросу заказ удален! Id удаленного заказа " + id);
+//                result = 0;
+//            }
+//            else ordersProcTmp.put(item.getKey(), item.getValue());
+//        }
+//
+//        System.out.println("Id оставшихся товаров: ");
+//        for (Map.Entry<UUID, Order> item : ordersProcTmp.entrySet()){
+//            System.out.println(item.getKey());
+//        }
+//
+//        return result;
+//    }
+
